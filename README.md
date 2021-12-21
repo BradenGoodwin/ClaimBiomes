@@ -1,3 +1,3 @@
 # ClaimBiomes
-A Minecraft plugin built against Spigot/Bukkit API for claiming biomes w/ Dynmap support
+A Minecraft plugin built with Spigot/Bukkit API for claiming biomes w/ Dynmap support
 
