@@ -12,9 +12,8 @@ description: Here's the description
 ############################################################
 commands:
   claimbiome:
-    description: Claim the surface biome you are currently standing in.
-    aliases: cb
-    usage: /cb <claim|unclaim> [player]
-    permission: claimbiomes.cb
+    description: This is a demo command.
+    usage: /claimbiome <name>
+    permission: claimbiomes.claimbiome
     permission-message: You don't have permission to claim biomes
 

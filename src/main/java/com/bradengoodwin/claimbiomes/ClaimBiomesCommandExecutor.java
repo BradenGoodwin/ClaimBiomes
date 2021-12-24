@@ -1,5 +1,6 @@
 package com.bradengoodwin.claimbiomes;
 
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -14,16 +15,16 @@ public class ClaimBiomesCommandExecutor implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (cmd.getName().equalsIgnoreCase("claimbiome")) { // If the player typed /basic then do the following, note: If you only registered this executor for one command, you don't need this
-            if (!(sender instanceof Player)) {
-                sender.sendMessage("This command can only be run by a player.");
-            } else {
-                Player player = (Player) sender;
-                // do something
-            }
-            return true;
-        } //If this has happened the function will return true.
-        // If this hasn't happened the value of false will be returned.
-        return false;
+        //if (cmd.getName().equalsIgnoreCase("claimbiome") ||
+            //cmd.getName().equalsIgnoreCase("cb"))
+        if (!(sender instanceof Player)) {
+            sender.sendMessage("This command can only be run by a player.");
+        } else {
+            sender.sendMessage("Usage: /cb <claim|unclaim> [player]");
+            Player player = (Player) sender;
+            Location loc = player.getLocation();
+        }
+        return true;
+        //}
     }
 }
