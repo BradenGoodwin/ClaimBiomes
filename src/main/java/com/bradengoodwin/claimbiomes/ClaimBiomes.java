@@ -11,12 +11,10 @@ public class ClaimBiomes extends JavaPlugin {
     private static ClaimBiomes instance;
 
     @Override
-    public void onEnable(){
-        getLogger().info("onEnable has been invoked");
-
-        Bukkit.getPluginManager().registerEvents(new HelloWorld(), this);
-        // This will throw a NullPointerException if you don't have the command defined in your plugin.yml file!'
-        this.getCommand("claimbiome").setExecutor(new ClaimBiomesCommandExecutor(this));
+    public void onEnable() {
+        //Bukkit.getPluginManager().registerEvents(new HelloWorld(), this);
+        this.getCommand("claimbiomes").setExecutor(new ClaimBiomesCommandExecutor(this));
+        getLogger().info("enabled");
     }
 
     @Override

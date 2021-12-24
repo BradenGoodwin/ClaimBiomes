@@ -1,6 +1,8 @@
+com/bradengoodwin/claimbiomes/utils/ClaimableChunk.java
+ com.bradengoodwin.claimbiomes.utils.ClaimableChunk
+com/bradengoodwin/claimbiomes/HelloWorld.java
+ com.bradengoodwin.claimbiomes.HelloWorld
 com/bradengoodwin/claimbiomes/ClaimBiomes.java
  com.bradengoodwin.claimbiomes.ClaimBiomes
 com/bradengoodwin/claimbiomes/ClaimBiomesCommandExecutor.java
  com.bradengoodwin.claimbiomes.ClaimBiomesCommandExecutor
-com/bradengoodwin/claimbiomes/HelloWorld.java
- com.bradengoodwin.claimbiomes.HelloWorld
