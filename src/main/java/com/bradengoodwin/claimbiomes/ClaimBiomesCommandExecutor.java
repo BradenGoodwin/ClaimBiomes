@@ -21,28 +21,26 @@ public class ClaimBiomesCommandExecutor implements CommandExecutor {
             //cmd.getName().equalsIgnoreCase("cb"))
         if (!(sender instanceof Player)) {
             sender.sendMessage("This command can only be run by a player.");
+            return true;
+        }
+
+        if (args.length == 0) {
+            return false;
+        }
+
+        Player player = (Player) sender;
+        Location loc = player.getLocation();
+        Biome biome = loc.getBlock().getBiome();
+        Chunk chunk = loc.getChunk();
+        String arg = args[0].toString();
+
+        if (arg.equals("claim")) {
+            player.sendMessage("This command is not yet implemented.");
+        } else if (arg.equals("info")) {
+            player.sendMessage("Current biome: " + biome.name());
+            player.sendMessage("Current chunk: " + chunk.toString());
         } else {
-            if (args.length == 0) {
-                return false;
-            }
-
-            System.out.println("Args passed: " + args.toString());
-
-            Player player = (Player) sender;
-            Location loc = player.getLocation();
-            Biome biome = loc.getBlock().getBiome();
-            Chunk chunk = loc.getChunk();
-            String arg = args[0].toString();
-
-            if (arg.equals("claim")) {
-                player.sendMessage("This command is not yet implemented.");
-            } else if (arg.equals("info")) {
-                player.sendMessage("Current biome: " + biome.name());
-                player.sendMessage("Current chunk: " + chunk.toString());
-            } else {
-                sender.sendMessage("Did not recognize argument: " + arg);
-            }
-
+            sender.sendMessage("Did not recognize argument: " + arg);
         }
         return true;
         //}
